@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>OAuth Flask Demo</title>
+    </head>
+    <body>
+        <h1>OAuth Demo</h1>
+        {% if not current_user.is_authenticated %}
+        <p>You are not authenicated via Google OAuth</p>
+        <p><a href="{{ url_for('login') }}">Login with Google</a></p>
+        {% else %}
+        <p>Hello {{current_user.id}}!! You are authenicated via Google OAuth!!</p>
+        <p><a href="{{ url_for('logout') }}">Logout with Google</a></p>
+        {% endif %}
+    
+        <div>
+            <iframe src="{{url}}" width="100%" height="70%"></iframe>
+        </div>
+    </body>
+</html>
+

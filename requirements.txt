@@ -1,0 +1,6 @@
+requests
+Flask
+oauthlib
+pyOpenSSL
+Flask-Login
+looker_sdk
