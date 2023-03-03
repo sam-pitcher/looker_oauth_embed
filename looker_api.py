@@ -45,8 +45,6 @@ def looker_create_sso_url(user_id, dashboard_url):
         models=["looker_oauth_embed"],
         group_ids=["1"],
         external_group_id="iFrame"
-        # user_attributes: Optional[MutableMapping[str, Any]] = None
-        # secret_id="97af9a9aa7165692a6c496a49e27c104fa7afab36b471c965affe49a72a52606"
       )
     response = sdk.create_sso_embed_url(body)
     return response
@@ -69,7 +67,7 @@ def looker_create_oauth_application_user_state(user_id, oauth_application_id, ac
     )
     # print(body)
     a = sdk.create_oauth_application_user_state(body)
-    print(a)
+    # print(a)
     # print(dir(sdk))
     return a
 
